@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/RequestView.dart';
 import 'MyOriginalPage.dart';
 
 void main() => runApp(MyApp());
@@ -81,16 +82,11 @@ class CupertinoDialogTestState extends State<CupertinoDialogTest> {
             color: Colors.blue,
             borderRadius: new BorderRadius.circular(30.0),
             onPressed: () {
-              showDialog(
-                  context: context,
-                  child: new CupertinoAlertDialog(
-                    title: new Column(
-                      children: <Widget>[
-                        new Text("テストダイアログ"),
-                      ],
-                    ),
-                    actions: <Widget>[new FlatButton(child: new Text("OK"))],
-                  ));
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => RequestView(), fullscreenDialog: true),
+              );
             },
             child: Text('ダイアログを表示します'),
           ),
