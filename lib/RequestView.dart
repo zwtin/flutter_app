@@ -15,12 +15,15 @@ class RequestViewState extends State<RequestView> {
           '新規リクエスト',
           style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Color(0xFF000000),
+              color: Color(0xFFFFFFFF),
               fontSize: 18
           ),),
         backgroundColor: Color(0xFF0000FF),
       ),
       body: SafeArea(
+        child: Column(
+
+        ),
       )
     );
   }

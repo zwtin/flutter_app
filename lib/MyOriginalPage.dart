@@ -43,7 +43,8 @@ class _MyOriginalPageState extends State<MyOriginalPage> {
             fontWeight: FontWeight.bold,
             color: Color(0xFF000000),
             fontSize: 18
-          ),),
+          ),
+        ),
         backgroundColor: Color(0xFFFFFFFF),
       ),
       body: SafeArea(

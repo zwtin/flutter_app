@@ -82,8 +82,7 @@ class CupertinoDialogTestState extends State<CupertinoDialogTest> {
             color: Colors.blue,
             borderRadius: new BorderRadius.circular(30.0),
             onPressed: () {
-              Navigator.push(
-                context,
+              Navigator.of(context, rootNavigator: true).push(
                 MaterialPageRoute(
                     builder: (context) => RequestView(), fullscreenDialog: true),
               );
