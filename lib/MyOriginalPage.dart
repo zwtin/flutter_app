@@ -36,6 +36,16 @@ class _MyOriginalPageState extends State<MyOriginalPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'マイページ',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Color(0xFF000000),
+            fontSize: 18
+          ),),
+        backgroundColor: Color(0xFFFFFFFF),
+      ),
       body: SafeArea(
         child: ListView.builder(
           itemBuilder: (BuildContext context, int index) {
