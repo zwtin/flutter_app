@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/ExhibitPage.dart';
 import 'MyOriginalPage.dart';
+import 'MyPage.dart';
 import 'package:flutter_app/CupertinoActionSheetTest.dart';
 import 'package:flutter_app/CupertinoDialogTest.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -45,6 +48,14 @@ class _MyHomePageState extends State<MyHomePage> {
             icon: Icon(CupertinoIcons.book),
             title: Text('テストページ2'),
           ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.bell),
+            title: Text('出品'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.car),
+            title: Text('マイページ'),
+          ),
         ],
       ),
       tabBuilder: (context, index) {
@@ -59,6 +70,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 break;
               case 2:
                 return CupertinoActionSheetTest();
+                break;
+              case 3:
+                return ExhibitPage();
+                break;
+              case 4:
+                return MyPage();
                 break;
             }
           },
