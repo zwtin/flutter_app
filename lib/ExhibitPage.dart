@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:convert';
-import 'package:http/http.dart' as http;
-import 'Issue.dart';
 
 class ExhibitPage extends StatefulWidget {
   @override
@@ -10,11 +7,6 @@ class ExhibitPage extends StatefulWidget {
 }
 
 class ExhibitPageState extends State<ExhibitPage> {
-
-  @override
-  void initState() {
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +21,14 @@ class ExhibitPageState extends State<ExhibitPage> {
           ),
         ),
         backgroundColor: Color(0xFFFFFFFF),
+      ),
+      body: Center(
+        child: Container(
+          margin: EdgeInsets.symmetric(vertical: 10),
+          height: 100,
+          width: 100,
+          child: FlutterLogo(),
+        ),
       ),
     );
   }
